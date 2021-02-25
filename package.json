@@ -9,6 +9,9 @@
   },
   "author": "Aashis Kishore <aashiskishore@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=13"
+  },
   "type": "module",
   "devDependencies": {
     "eslint": "^7.20.0",
