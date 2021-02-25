@@ -9,6 +9,7 @@
   },
   "author": "Aashis Kishore <aashiskishore@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "eslint": "^7.20.0",
     "eslint-config-standard": "^16.0.2",
