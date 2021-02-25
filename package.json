@@ -26,5 +26,8 @@
       "test/*",
       "node_modules/*"
     ]
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
