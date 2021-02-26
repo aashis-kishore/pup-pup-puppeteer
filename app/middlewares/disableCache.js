@@ -2,8 +2,6 @@ export default (req, res, next) => {
   const ENV = req.app.get('env') || process.env.NODE_ENV
 
   if (ENV === 'development' || ENV === 'test') {
-    console.info('Disabling cache')
-
     req.app.disable('view cache') // Not sure what this does
     req.app.set('etag', false)
 
