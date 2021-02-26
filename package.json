@@ -5,7 +5,8 @@
   "main": "app/server.js",
   "scripts": {
     "start": "NODE_ENV=production node app/server.js",
-    "dev": "NODE_ENV=development nodemon --watch app --watch libs app/server.js"
+    "dev": "NODE_ENV=development nodemon --watch app --watch libs app/server.js",
+    "test": "mocha"
   },
   "author": "Aashis Kishore <aashiskishore@gmail.com>",
   "license": "MIT",
