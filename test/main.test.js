@@ -5,7 +5,7 @@ import app from '../app/app.js'
 import getBrowser from './pages/browser.js'
 import IndexPage from './pages/index.page.js'
 
-describe('The story of the user', function () {
+describe('Successful usecases', function () {
   this.timeout(1000 * 30) // 30 seconds
 
   let browser
@@ -21,7 +21,7 @@ describe('The story of the user', function () {
     await server.close()
   })
 
-  it('the user story should complete', async function () {
+  it('should fill the contact form without any hurdle', async function () {
     // So, our beloved User visits our home page
     let indexPage = await new IndexPage({ browser }).open()
     // His eyes fall straight on the BIG heading
