@@ -4,7 +4,7 @@ import ContactForm from './contactForm.page.js'
 
 class ContactPage extends Page {
   constructor ({ browser, page }) {
-    super({ browser: browser })
+    super({ browser })
 
     this.page = page
     this.url = super.url + '/contact'

@@ -4,6 +4,9 @@ import ContactPage from './contact.page.js'
 class IndexPage extends Page {
   constructor ({ browser, page }) {
     super({ browser })
+
+    this.page = page
+    this.url = super.url
   }
 
   get title () {

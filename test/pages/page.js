@@ -42,4 +42,8 @@ export default class Page {
 
     return this
   }
+
+  async close () {
+    await this.page.close()
+  }
 }
