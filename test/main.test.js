@@ -6,13 +6,13 @@ import getBrowser from './pages/browser.js'
 import IndexPage from './pages/index.page.js'
 
 describe('The story of the user', function () {
-  this.timeout(1000 * 20)
+  this.timeout(1000 * 30) // 30 seconds
 
   let browser
   let server
 
   before(async function () {
-    browser = await getBrowser({ headless: false })
+    browser = await getBrowser({ headless: false, slowMo: 150 })
     server = await app.listen(3001)
   })
 
@@ -52,11 +52,11 @@ describe('The story of the user', function () {
 
     const email = await contactForm.email
     // He types in his email
-    await email.type('my.example@email.com', { delay: 150 })
+    await email.type('my.example@email.com')
 
     const subToNewsletter = await contactForm.subToNewsletter
     // He chooses not to subscribe to weekly newsletter
-    await subToNewsletter.click({ delay: 150 })
+    await subToNewsletter.click()
     // Finally he submits the form;
     // Successfull submission takes him to contact status page
     const contactStatusPage = await contactForm.submit()
