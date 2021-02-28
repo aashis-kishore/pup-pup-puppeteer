@@ -47,5 +47,17 @@ describe('The story of the user', function () {
     const contactTitle = await contactPage.title
     // Title also reads Contact
     expect(contactTitle).to.equal('Contact')
+    // He sees the contact form and decides to fill it
+    const contactForm = contactPage.contactForm
+
+    const email = await contactForm.email
+    // He types in his email
+    await email.type('my.example@email.com', { delay: 150 })
+
+    const subToNewsletter = await contactForm.subToNewsletter
+    // He chooses not to subscribe to weekly newsletter
+    await subToNewsletter.click({ delay: 150 })
+    // Finally submits the form
+    await contactForm.submit()
   })
 })

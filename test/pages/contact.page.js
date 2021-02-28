@@ -1,5 +1,6 @@
 import Page from './page.js'
 import IndexPage from './index.page.js'
+import ContactForm from './contactForm.page.js'
 
 class ContactPage extends Page {
   constructor ({ browser, page }) {
@@ -12,7 +13,11 @@ class ContactPage extends Page {
   get heading () {
     return this.page
       .waitForSelector('#contact-title', { visible: true })
-      .then(el => el.evaluate(el => el.textContent))
+      .then((el) => el.evaluate((el) => el.textContent))
+  }
+
+  get contactForm () {
+    return new ContactForm({ page: this.page })
   }
 
   async navigateToIndex () {
